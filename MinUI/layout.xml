@@ -1,0 +1,156 @@
+<layout width="240" height="240" font="BPreplayBold-unhinted.ttf" loadFontSize="18" fontColor="FFFFFFF">
+
+
+    <sound type="load"      src="sounds/load.wav"/>
+    <sound type="unload"    src="sounds/unload.wav"/>
+    <sound type="highlight" src="sounds/highlight.wav"/>
+    <sound type="select"    src="sounds/select.wav"/>
+
+
+    <!--Background Image-->
+
+    <!-- <image src="images/bkgnd.png" x="0" y="0" height="stretch" width="stretch" layer="0"/> -->
+    <image src="images/background_menu.png" x="0" y="0" height="stretch" width="stretch" layer="0"/>
+
+    <!--Battery-->
+    <battery reloadPeriod="3" fontColor="ffffff" alpha="0" x="right" xOrigin="right" xOffset="-5" y="top" yOrigin="center" yOffset="13" layer="14" >
+        <onEnter>                   <set duration=".3"><animate type="alpha" to="1"/></set></onEnter>
+        <onExit>                   <set duration=".3"><animate type="alpha" to="0"/></set></onExit>
+        <onMenuEnter menuIndex="0"><set duration=".3"><animate type="alpha" to="1"/></set></onMenuEnter>
+        <onMenuExit  menuIndex="0"><set duration=".3"><animate type="alpha" to="0"/></set></onMenuExit>
+        <onGameEnter menuIndex="0"><set duration=".3"><animate type="alpha" to="0"/></set></onGameEnter>
+        <onGameExit  menuIndex="0"><set duration=".3"><animate type="alpha" to="1"/></set></onGameEnter>
+    </battery>
+
+
+    <!--Main Menu index 0-->
+    <!-- This is the main menu. It is set to show game logo images instead of text -->
+
+    <menu type="custom" model="layout" orientation="vertical" scrollTime=".21" scrollAcceleration=".02" x="left" xOrigin="left" width="240" height="240" y="0" yOrigin="top" layer="1" menuIndex="0">
+        <itemDefaults alpha="1" x="0" xOrigin="left" xOffset="0" layer="2" height="30" maxWidth="240"  textFallback="true" imageFallback="false" fontColor="FFFFFF" fontSize="21">
+            <onExit><set duration=".3"><animate type="alpha" to="0" algorithm="easeinquadratic"/></set></onExit>
+            <onGameEnter menuIndex="1"><set duration=".3"><animate type="alpha" to="0"/></set></onGameEnter>
+            <onGameExit  menuIndex="1"><set duration=".3"><animate type="alpha" to="1"/></set></onGameEnter>
+            <onMenuExit menuIndex="0">
+                <set duration=".1">
+                    <!-- <animate type="yOffset" from="0" to="-150" algorithm="easeinquadratic"/>
+                    <animate type="xOffset" from="0" to="-60" algorithm="easeinquadratic"/> -->
+                    <!-- <animate type="alpha" to="0"/> -->
+                    <animate type="xOffset" from="0" to="-240" algorithm="easeinquadratic"/>
+                </set>
+            </onMenuExit>
+            <onMenuEnter menuIndex="0">
+                <set duration=".4">
+                    <!-- <animate type="yOffset" from="-150" to="0" algorithm="easeinquadratic"/>
+                    <animate type="xOffset" from="-60" to="0" algorithm="easeinquadratic"/> -->
+                    <!-- <animate type="alpha" to="1"/> -->
+                    <animate type="xOffset" from="-240" to="0" algorithm="easeinquadratic"/>
+                </set>
+            </onMenuEnter>
+        </itemDefaults>
+
+        <item yOffset="-30" alpha="0"/>
+        <item yOffset="0"/>
+        <item yOffset="30"/>
+        <item yOffset="60"/>
+        <item yOffset="90" selected="true" fontColor="AE9A53" fontSize="22" backgroundColor="FFFFFF" containerHeight="30" containerWidth="stretch"/>
+        <item yOffset="120"/>
+        <item yOffset="150"/>
+        <item yOffset="180"/>
+        <item yOffset="240" alpha="0"/>
+
+    </menu>
+
+
+<!--SUB  MENU-->
+    <!--Sub Menu  index 1-->
+
+    <!--SUB  MENU-->
+    <!--Sub Menu  index 1-->
+    <menu type="custom" model="layout" orientation="vertical" scrollTime=".21" scrollAcceleration=".02" x="left" xOrigin="left" width="240" height="240" y="0" yOrigin="top" layer="4" menuIndex="1">
+
+        <itemDefaults alpha="1" x="0" xOrigin="left" xOffset="0" layer="5" height="30" maxWidth="240"  textFallback="true" imageFallback="false" fontColor="FFFFFF" fontSize="21">
+          <onExit> <set duration=".3"><animate type="alpha" to="0" algorithm="easeincubic"/></set></onExit>
+        </itemDefaults>
+
+        <item yOffset="-30" alpha="0">
+          <onExit> <set duration=".3"><animate type="alpha" to="0" algorithm="easeincubic"/></set></onExit>
+          <onMenuEnter menuIndex="1"><set duration=".3"><animate type="xOffset" from="-240" to="0" algorithm="easeinquadratic"/></set></onMenuEnter>
+          <onMenuExit  menuIndex="1"><set duration=".3"><animate type="xOffset" from="0" to="-240" algorithm="easeinquadratic"/></set></onMenuExit>
+          <onGameEnter menuIndex="1"><set duration=".3"><animate type="alpha" to="0"/></set></onGameEnter>
+          <onGameExit  menuIndex="1"><set duration=".3"><animate type="alpha" to="1"/></set></onGameEnter>
+        </item>
+
+
+        <item yOffset="60">
+          <onExit> <set duration=".3"><animate type="alpha" to="0" algorithm="easeincubic"/></set></onExit>
+          <onMenuEnter menuIndex="1"><set duration=".3"><animate type="xOffset" from="-240" to="0" algorithm="easeinquadratic"/></set></onMenuEnter>
+          <onMenuExit  menuIndex="1"><set duration=".3"><animate type="xOffset" from="0" to="-240" algorithm="easeinquadratic"/></set></onMenuExit>
+          <onGameEnter menuIndex="1"><set duration=".3"><animate type="alpha" to="0"/></set></onGameEnter>
+          <onGameExit  menuIndex="1"><set duration=".3"><animate type="alpha" to="1"/></set></onGameEnter>
+        </item>
+
+        <item yOffset="90" selected="true" fontColor="AE9A53" fontSize="22">
+          <onExit> <set duration=".3"><animate type="alpha" to="0" algorithm="easeincubic"/></set></onExit>
+          <onMenuEnter menuIndex="1"><set duration=".3"><animate type="xOffset" from="-240" to="0" algorithm="easeinquadratic"/></set></onMenuEnter>
+          <onMenuExit  menuIndex="1"><set duration=".3"><animate type="xOffset" from="0" to="-240" algorithm="easeinquadratic"/></set></onMenuExit>
+          <onGameEnter menuIndex="1"><set duration=".3"><animate type="alpha" to="0"/></set></onGameEnter>
+          <onGameExit  menuIndex="1"><set duration=".3"><animate type="alpha" to="1"/></set></onGameEnter>
+        </item>
+
+        <item yOffset="120">
+          <onExit> <set duration=".3"><animate type="alpha" to="0" algorithm="easeincubic"/></set></onExit>
+          <onMenuEnter menuIndex="1"><set duration=".3"><animate type="xOffset" from="-240" to="0" algorithm="easeinquadratic"/></set></onMenuEnter>
+          <onMenuExit  menuIndex="1"><set duration=".3"><animate type="xOffset" from="0" to="-240" algorithm="easeinquadratic"/></set></onMenuExit>
+          <onGameEnter menuIndex="1"><set duration=".3"><animate type="alpha" to="0"/></set></onGameEnter>
+          <onGameExit  menuIndex="1"><set duration=".3"><animate type="alpha" to="1"/></set></onGameEnter>
+        </item>
+
+        <item yOffset="150">
+          <onExit> <set duration=".3"><animate type="alpha" to="0" algorithm="easeincubic"/></set></onExit>
+          <onMenuEnter menuIndex="1"><set duration=".3"><animate type="xOffset" from="-240" to="0" algorithm="easeinquadratic"/></set></onMenuEnter>
+          <onMenuExit  menuIndex="1"><set duration=".3"><animate type="xOffset" from="0" to="-240" algorithm="easeinquadratic"/></set></onMenuExit>
+          <onGameEnter menuIndex="1"><set duration=".3"><animate type="alpha" to="0"/></set></onGameEnter>
+          <onGameExit  menuIndex="1"><set duration=".3"><animate type="alpha" to="1"/></set></onGameEnter>
+        </item>
+
+        <item yOffset="180">
+          <onExit> <set duration=".3"><animate type="alpha" to="0" algorithm="easeincubic"/></set></onExit>
+          <onMenuEnter menuIndex="1"><set duration=".3"><animate type="xOffset" from="-240" to="0" algorithm="easeinquadratic"/></set></onMenuEnter>
+          <onMenuExit  menuIndex="1"><set duration=".3"><animate type="xOffset" from="0" to="-240" algorithm="easeinquadratic"/></set></onMenuExit>
+          <onGameEnter menuIndex="1"><set duration=".3"><animate type="alpha" to="0"/></set></onGameEnter>
+          <onGameExit  menuIndex="1"><set duration=".3"><animate type="alpha" to="1"/></set></onGameEnter>
+        </item>
+
+        <item yOffset="240" alpha="0">
+          <onExit> <set duration=".3"><animate type="alpha" to="0" algorithm="easeincubic"/></set></onExit>
+          <onMenuEnter menuIndex="1"><set duration=".3"><animate type="xOffset" from="-240" to="0" algorithm="easeinquadratic"/></set></onMenuEnter>
+          <onMenuExit  menuIndex="1"><set duration=".3"><animate type="xOffset" from="0" to="-240" algorithm="easeinquadratic"/></set></onMenuExit>
+          <onGameEnter menuIndex="1"><set duration=".3"><animate type="alpha" to="0"/></set></onGameEnter>
+          <onGameExit  menuIndex="1"><set duration=".3"><animate type="alpha" to="1"/></set></onGameEnter>
+        </item>
+
+    </menu>
+
+
+    <!-- add submenu bg -->
+    <image src="images/background_submenu.png" x="0" y="0" height="stretch" width="stretch" alpha="0" layer="3">
+        <onExit><set duration=".3"><animate type="alpha" to="0" algorithm="easeinquadratic"/></set></onExit>
+        <onGameEnter menuIndex="1"><set duration=".3"><animate type="alpha" to="0"/></set></onGameEnter>
+        <onGameExit  menuIndex="1"><set duration=".3"><animate type="alpha" to="1"/></set></onGameEnter>
+        <onMenuExit menuIndex="1"><set duration=".2"><animate type="alpha" to="0" algorithm="easeinquadratic"/></set></onMenuExit>
+        <onMenuEnter menuIndex="1"><set duration=".01"><animate type="alpha" to="1" algorithm="easeinquadratic"/></set></onMenuExit>
+    </image>
+
+
+    <!-- System name -->
+    <reloadableImage mode="systemlayout" type="logo_h20" alpha="0" x="0" xOrigin="left" y="32" yOrigin="center" layer="6" textFallback="true">
+        <onExit> <set duration=".3"><animate type="alpha" to="0" algorithm="easeincubic"/></set></onExit>
+        <onGameEnter menuIndex="1"><set duration=".3"><animate type="alpha" to="0"/></set></onGameEnter>
+        <onGameExit  menuIndex="1"><set duration=".3"><animate type="alpha" to="1"/></set></onGameEnter>
+        <onMenuExit menuIndex="1"><set duration=".2"><animate type="alpha" to="0" algorithm="easeinquadratic"/></set></onMenuExit>
+        <onMenuEnter menuIndex="1"><set duration=".01"><animate type="alpha" to="1" algorithm="easeinquadratic"/></set></onMenuExit>
+    </reloadableImage>
+
+
+</layout>
