@@ -8,14 +8,20 @@ I made this theme because I love MinUI and its simplicity. I loaded my RGNano wi
 ## Screenshots
 
 **Menu**
+
 ![](https://github.com/toniremi/funkey_minui_theme/blob/main/Menu_1.PNG)
 
 **Sub-Menu**
+
 ![](https://github.com/toniremi/funkey_minui_theme/blob/main/SubMenu_1.PNG)
 ![](https://github.com/toniremi/funkey_minui_theme/blob/main/SubMenu_2.PNG)
 
 ## Install
 
-To use one of the theme listed above, begin by downloading and extracting its associated ZIP file from the releases. Unzip the zip file and you should see a folder called MinUI. With the FunKey S mounted to your computer, first copy and paste the generated folder into the /mnt/FunKey/.retrofe/layouts section of the FunKey S file system. Finally edit the layout file wiht a text editor and include `MinUI` there to display this theme.
-
-After this you should see the theme listed in the theme options and should be able to switch to it.
+1. Download the theme from the releases section [here]() 
+2. Unzip the zip file and you should see a folder called **MinUI**.
+3. Mount your funkey S to your computer or insert the SD card on your SD Card reader.
+4. Copy and paste the MinUI folder into `/mnt/FunKey/.retrofe/layouts`
+5. Edit the layout file with a text editor and include `MinUI` on the list so the menu appears in the menu options.
+6. Unmount Funkey S or eject the SD Card and add it to your device.
+7. Finally select the MinUI theme from the theme list.
