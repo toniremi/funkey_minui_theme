@@ -18,7 +18,7 @@ I made this theme because I love MinUI and its simplicity. I loaded my RGNano wi
 
 ## Install
 
-1. Download the theme from the releases section [here]() 
+1. Download the theme from the releases section [here](https://github.com/toniremi/funkey_minui_theme/releases/download/v1.0.0/MinUI.zip) 
 2. Unzip the zip file and you should see a folder called **MinUI**.
 3. Mount your funkey S to your computer or insert the SD card on your SD Card reader.
 4. Copy and paste the MinUI folder into `/mnt/FunKey/.retrofe/layouts`
