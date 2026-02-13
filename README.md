@@ -14,7 +14,6 @@ I made this theme because I love MinUI and its simplicity. I loaded my RGNano wi
 **Sub-Menu**
 
 ![](https://github.com/toniremi/funkey_minui_theme/blob/main/SubMenu_1.PNG)
-![](https://github.com/toniremi/funkey_minui_theme/blob/main/SubMenu_2.PNG)
 
 ## Install
 
